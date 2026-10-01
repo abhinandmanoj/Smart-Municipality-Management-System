@@ -1,0 +1,213 @@
+/* =========================================================
+   SMART MUNICIPALITY - GLOBAL APP CSS
+   ========================================================= */
+
+:root {
+  --municipality-navy: #0b1b2b;
+  --municipality-navy-dark: #071521;
+  --municipality-gold: #e8aa0c;
+  --municipality-gold-dark: #c99000;
+  --municipality-bg: #f5f7fa;
+  --municipality-border: #dce3ea;
+  --municipality-text: #0b1b2b;
+  --municipality-muted: #64748b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f5f7fa;
+  color: #0b1b2b;
+  font-family:
+    Inter,
+    Poppins,
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #e8aa0c;
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   ROOT
+   ========================================================= */
+
+#root {
+  min-height: 100vh;
+}
+
+/* =========================================================
+   SEARCH INPUT WITH ICON — GLOBAL FIX
+   Handles icon-inside-input overlap across all pages.
+   These rules are applied via the .sm-search-box class
+   added to any relative wrapper that contains an icon + input.
+   ========================================================= */
+
+/* The wrapper that holds icon + input */
+.sm-search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* The search icon inside the wrapper */
+.sm-search-box > svg,
+.sm-search-box > span > svg {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  flex-shrink: 0;
+  z-index: 1;
+  width: 14px;
+  height: 14px;
+}
+
+/* The input inside the wrapper — guaranteed left padding */
+.sm-search-box > input {
+  padding-left: 42px !important;
+  width: 100%;
+}
+
+/* =========================================================
+   PROFILE INPUT WITH ICON — GLOBAL FIX
+   Handles icon-inside-profile-field overlap.
+   ========================================================= */
+
+.sm-input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.sm-input-box > svg,
+.sm-input-box > span > svg,
+.sm-input-box > span {
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  flex-shrink: 0;
+  z-index: 1;
+  color: #9ca3af;
+  font-size: 12px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+}
+
+.sm-input-box > input {
+  padding-left: 40px !important;
+  width: 100%;
+}
+
+/* =========================================================
+   FILTER BAR CONTROLS — CONSISTENT HEIGHT
+   ========================================================= */
+
+.sm-filter-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .sm-filter-bar {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.sm-filter-bar input,
+.sm-filter-bar select,
+.sm-filter-bar button {
+  height: 44px;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   PASSWORD INPUT WITH ICON — GLOBAL FIX
+   ========================================================= */
+
+.sm-password-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.sm-password-box > svg {
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 1;
+  color: #9ca3af;
+  width: 13px;
+  height: 13px;
+}
+
+.sm-password-box > input {
+  padding-left: 40px !important;
+  width: 100%;
+}
